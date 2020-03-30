@@ -4,6 +4,7 @@ import Restaurants from './components/Restaurants';
 
 export class App extends Component {
   render() {
+    console.log(this.props.store)
     return (
       <div className="App">
         <RestaurantInput />
