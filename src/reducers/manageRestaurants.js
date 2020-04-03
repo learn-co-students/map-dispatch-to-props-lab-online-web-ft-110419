@@ -4,9 +4,11 @@ export default function manageRestaurants(state = {
   switch (action.type) {
 
     case 'ADD_RESTAURANT':
+      let newArray = state.restaurants.slice()
+      newArray.push({name: action.restaurant.name, location: action.restaurant.location})
       return {
         ...state,
-        restaurants: [...state.restaurants, action.restaurant]
+        restaurants: newArray
       }
 
     default:
