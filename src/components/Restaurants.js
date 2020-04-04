@@ -20,5 +20,8 @@ class Restaurants extends Component {
 const mapStateToProps = state => {
   return { restaurants: state.restaurants }
 }
+const mapDispatchToProps = dispatch =>{
+  return {add_restaurant: () => dispatch({type: "ADD_RESTAURANT"})}
+}
 
-export default connect(mapStateToProps)(Restaurants);
+export default connect(mapStateToProps,mapDispatchToProps)(Restaurants);
